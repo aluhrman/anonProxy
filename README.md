@@ -7,5 +7,7 @@ Say you need to scrape a website anonymously, or surf the internet via tor but d
 # How to do I deploy it?
 You will need Docker and Docker-Compse
 
-`$docker-compose up`
+RUN:
+`docker-compose up`
 
+Once the proxy is deployed you can point your web browser or systems at a local proxy hosted on port 2605 (127.0.0.1:2605)
