@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 #Update and install wget
-RUN apt-get update && apt-get install -y wget
+RUN apt-get update && apt-get install -y wget gnupg2
 
 # Download and install delegated
 RUN cd /tmp && wget http://www.delegate.org/ftp/pub/DeleGate/beta/bin-latest9/old/fc6_64-dg.gz && gunzip fc6_64-dg.gz && mv fc6_64-dg /usr/local/bin/delegated && chmod +x /usr/local/bin/delegated
