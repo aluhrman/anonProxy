@@ -1,0 +1,4 @@
+anonProxy:
+  build: .
+  ports:
+    - "2605:2605"
