@@ -10,7 +10,7 @@ RUN cd /tmp && wget http://www.delegate.org/ftp/pub/DeleGate/beta/bin-latest9/ol
 RUN echo 'deb http://deb.torproject.org/torproject.org trusty main' | tee /etc/apt/sources.list.d/torproject.list
 
 # Add gpg key for tor sources
-RUN gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 && gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
+RUN gpg --keyserver keyserver.ubuntu.com --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 && gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
 
 # Install Packages
 RUN apt-get update && apt-get install -y haproxy monit ruby tor
