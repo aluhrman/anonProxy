@@ -19,3 +19,7 @@ The current setup will create 15 individual tor circuits but you may modify the 
 Also the `p` variable defines what port to setup up the http proxy on, if you change this make sure to also modify the `EXPOSE` variable in the `Dockerfile`. Haproxy, delegated, and monit will be modified acordingly.
 
 `RUN mkdir /opt/aproxy && /tmp/rotating_proxy_setup.rb /opt/aproxy -i 15 -p 2605`
+
+## Credits
+Setup was inspired by:
+http://blog.databigbang.com/running-your-own-anonymous-rotating-proxies/
