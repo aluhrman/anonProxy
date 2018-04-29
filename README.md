@@ -21,5 +21,7 @@ Also the `p` variable defines what port to setup up the http proxy on, if you ch
 `RUN mkdir /opt/aproxy && /tmp/rotating_proxy_setup.rb /opt/aproxy -i 15 -p 2605`
 
 ## Credits
-Setup was inspired by:
-http://blog.databigbang.com/running-your-own-anonymous-rotating-proxies/
+Setup was inspired by
+
+* http://blog.databigbang.com/running-your-own-anonymous-rotating-proxies/
+* https://github.com/mattes/rotating-proxy
