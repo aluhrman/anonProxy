@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:trusty
 
 #Update and install wget
 RUN apt-get update && apt-get install -y wget gnupg2
@@ -31,4 +31,4 @@ RUN mkdir /opt/aproxy && /tmp/rotating_proxy_setup.rb /opt/aproxy -i 15 -p 2605 
 EXPOSE 2605
 
 # Restart proxy service
-CMD ["monit -Ic /etc/monit/monitrc"]
+CMD ["monit", "-Ic", "/etc/monit/monitrc"]
