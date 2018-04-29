@@ -24,8 +24,10 @@ COPY assets/rotating_proxy_setup.rb /tmp/
 # Make install script executable
 RUN chmod +x /tmp/rotating_proxy_setup.rb
 
-# Setup proxy
-RUN mkdir /opt/aproxy && /tmp/rotating_proxy_setup.rb /opt/aproxy -i 15 -p 2605 && chown -R root:root /opt/aproxy && chmod -R 777 /opt/aproxy && cp /opt/aproxy/etc/monitrc /etc/monit/monitrc && cp /opt/aproxy/etc/monit_htpasswd /etc/monit/
+# Setup proxy (modify i for more or less circuits)
+RUN mkdir /opt/aproxy && /tmp/rotating_proxy_setup.rb /opt/aproxy -i 15 -p 2605 
+
+RUN chown -R root:root /opt/aproxy && chmod -R 777 /opt/aproxy && cp /opt/aproxy/etc/monitrc /etc/monit/monitrc && cp /opt/aproxy/etc/monit_htpasswd /etc/monit/
 
 # Expose proxy port
 EXPOSE 2605
